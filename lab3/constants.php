@@ -1,14 +1,14 @@
 <?php
 
 declare(strict_types=1);
+
 echo "<h1>Список констант PHP</h1>\n";
 echo "<pre>\n";
 
 $constants = get_defined_constants();
 ksort($constants);
 
-echo "\nВсего: " . count($constants) . " констант\n";
-echo "<pre>\n";
+echo "Всего: " . count($constants) . " констант\n\n";
 
 foreach ($constants as $name => $value) {
     echo str_pad($name, 40) . " = ";
@@ -23,5 +23,9 @@ foreach ($constants as $name => $value) {
         echo $value;
     }
 
-    echo "<pre>\n";
+    echo "\n";
 }
+
+echo "</pre>";
+
+?>
