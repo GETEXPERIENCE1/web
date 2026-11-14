@@ -1,4 +1,3 @@
-php
 <?php
 // ЗАДАНИЕ 1
 $day = (int) date('N');
