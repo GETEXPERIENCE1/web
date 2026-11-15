@@ -1,22 +1,5 @@
+
 <?php
-
-function getTable($width, $height, $color) {
-    echo "<table border='1' cellpadding='10'>";
-
-    for ($i = 0; $i < $height; $i++) {
-        echo "<tr>";
-
-        for ($j = 0; $j < $width; $j++) {
-            echo "<td style='background-color: $color'>";
-            echo "&nbsp;";
-            echo "</td>";
-        }
-
-        echo "</tr>";
-    }
-
-    echo "</table>";
-}
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $table_width = abs((int)$_POST["cols"]);
@@ -46,7 +29,13 @@ $table_color = ($table_color ?? '') ? $table_color : '#ffff00';
 
     <label>Цвет:</label>
     <br>
-    <input name="color" type="color" value="<?= htmlspecialchars($table_color) ?>" list="listColors">
+
+    <input
+        name="color"
+        type="color"
+        value="<?= htmlspecialchars($table_color) ?>"
+        list="listColors"
+    >
 
     <datalist id="listColors">
         <option value="#ff0000">
@@ -65,6 +54,9 @@ $table_color = ($table_color ?? '') ? $table_color : '#ffff00';
 
 <!-- Таблица -->
 
-<?php getTable($table_width, $table_height, $table_color); ?>
+<?php
+getTable($table_width, $table_height, $table_color);
+?>
 
 <!-- Конец области основного контента -->
+
