@@ -1,4 +1,3 @@
-
 <?php
 
 function getTable($width, $height, $color) {
