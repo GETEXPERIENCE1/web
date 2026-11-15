@@ -59,7 +59,7 @@ function diffToNextBirthday(DateTimeImmutable $birthdayДата, DateTimeImmutab
 
 // ЗАДАНИЕ 1
 $nowTs = time();
-$birthdayTs = strtotime('2005-04-14');
+$birthdayTs = strtotime('2003-07-25');
 $hour = getdate($nowTs)['hours'];
 
 // ЗАДАНИЕ 2
