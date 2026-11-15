@@ -1,7 +1,7 @@
 <?php
     declare(strict_types=1);
     $now = date("Y-m-d", time());
-    $birthday = mktime(6, 0, 0, 1, 5, 2006);
+    $birthday = mktime(6, 0, 0, 7, 25, 2003);
     $hour = time();
 ?>
 <!DOCTYPE html>
@@ -44,7 +44,7 @@
 		echo $fmt->format(new DateTime());
 		echo "<br>";
 
-		$birthday2 = mktime(6, 0, 0, 1, 5, 2027);
+		$birthday2 = mktime(6, 0, 0, 7, 25, 2027);
 		$time2 = $birthday2 - time();
 		$time2_days = $time2 / 60 / 60 / 24;
 		$time2_hours = fmod($time2_days, 1) * 24;
